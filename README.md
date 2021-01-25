@@ -22,7 +22,7 @@ To create a production build:
 npm run build-prod
 ```
 
-## Running
+## Runningg
 
 Open the file `dist/index.html` in your browser
 
