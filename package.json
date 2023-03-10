@@ -6,23 +6,25 @@
   "keywords": [],
   "author": "",
   "license": "ISC",
+  "source": "src/index.html",
   "scripts": {
     "clean": "rm dist/bundle.js",
-    "start": "parcel src/index.html",
-    "build-prod": "parcel build src/index.html"
+    "start": "parcel",
+    "build-prod": "parcel build"
   },
   "dependencies": {
-    "node-sass": "^5.0.0",
-    "react": "^17.0.1",
-    "react-dom": "^17.0.1",
-    "react-router-dom": "^5.2.0"
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "react-router-dom": "^6.8.2"
   },
   "devDependencies": {
-    "@babel/core": "^7.12.10",
-    "@babel/preset-env": "^7.12.11",
-    "@babel/preset-react": "^7.12.10",
-    "parcel-bundler": "^1.12.4",
-    "prettier": "^2.2.1",
-    "sass": "^1.32.5"
+    "@babel/core": "^7.21.0",
+    "@babel/preset-env": "^7.20.0",
+    "@babel/preset-react": "^7.18.6",
+    "@parcel/transformer-sass": "^2.8.3",
+    "parcel": "^2.8.3",
+    "prettier": "^2.8.4",
+    "process": "^0.11.10",
+    "sass": "^1.58.3"
   }
 }

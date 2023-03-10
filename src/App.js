@@ -3,7 +3,7 @@ import Header from "./components/Header";
 import Play from "./components/Play";
 import Game from "./components/Game";
 import Footer from "./components/Footer";
-import { Switch, Route } from "react-router-dom";
+import { Routes, Route } from "react-router-dom";
 
 function App() {
   const [myChoice, setMyChoice] = useState("");
@@ -13,14 +13,15 @@ function App() {
     <>
       <div className="container">
         <Header score={score} />
-        <Switch>
-          <Route exact path="/">
-            <Play setMyChoice={setMyChoice} />
-          </Route>
-          <Route path="/game">
-            <Game myChoice={myChoice} score={score} setScore={setScore} />
-          </Route>
-        </Switch>
+        <Routes>
+          <Route path="/" element={<Play setMyChoice={setMyChoice} />} />
+          <Route
+            path="/game"
+            element={
+              <Game myChoice={myChoice} score={score} setScore={setScore} />
+            }
+          />
+        </Routes>
       </div>
       <Footer />
     </>

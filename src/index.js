@@ -1,13 +1,15 @@
 import React from "react";
-import ReactDOM from "react-dom";
+import { createRoot } from 'react-dom/client';
 import { BrowserRouter as Router } from "react-router-dom";
 import App from "./App";
 import "./styles.scss";
 
-var mountNode = document.getElementById("app");
-ReactDOM.render(
+// This implementation has changed after React 18
+const mountNode = document.getElementById('app');
+const root = createRoot(mountNode)
+
+root.render(
   <Router>
     <App />
-  </Router>,
-  mountNode
+  </Router>
 );
